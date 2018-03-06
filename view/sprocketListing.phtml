@@ -1,0 +1,22 @@
+<h2>Sprocket Listing</h2>
+
+<?php
+foreach($sprockets as $sprocket) {
+
+    ?>
+    <div>
+        <label>ID: </label><?=$sprocket->getId();?><br/>
+        <label>Name: </label>
+        <?=$sprocket->getName();?>
+        <?php
+        $id = $sprocket->getID();
+        print("<a href=\"sprocket-Detail?id=$id\">Detail</a><p/>");
+        ?>
+
+    </div>
+
+
+    <?php
+}//foreach
+
+?>
