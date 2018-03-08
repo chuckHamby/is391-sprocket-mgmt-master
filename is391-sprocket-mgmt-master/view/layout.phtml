@@ -1,0 +1,33 @@
+<?php
+/* The template view that will be returned to the client. Each controller will set a view to be
+ * embedded (included) within this view inside the div with the id contentDiv.
+ */
+?>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <base href="/localhost" />
+        <meta charset="UTF-8" />
+        <title><?= $title ?></title>
+        <meta name="description" content="<?= $description ?>" />
+        <link rel="stylesheet" type="text/css" href="css/common.css" />
+    </head>
+
+    <body>
+        <div id="headerWrapperDiv">
+            <div id="headerDiv"><a href="/" style="color:white;"> IS391:</a> iSprocket Systems</div>
+            <div style="padding:0.5em;">
+                 <span>
+                    <a href="all-sprockets" style="font-size:14px;color:white;">All Sprockets</a>
+                 </span>
+            </div>
+        </div>
+        <br clear="both" />
+        <div id="contentDiv">
+            <?php $this->controller->renderView(); // renders the current view into the template ?>
+        </div>
+        <div id="footerDiv">
+            <div>&copy <?= date("Y") ?> &nbsp;iSprocket</div>
+        </div>
+    </body>
+</html>
